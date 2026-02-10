@@ -1,0 +1,13 @@
+The output contains the following errors:
+
+{ERROR_MESSAGES}
+
+Your task:
+• Correct ONLY the listed errors.
+• Do NOT remove rows.
+• Do NOT add new rows unless required by the errors.
+• Preserve all correct values.
+• The final output must conform exactly to the schema.
+
+Return the corrected JSON only.
+Do not include explanations, comments, or markdown.

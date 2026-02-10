@@ -6,7 +6,7 @@
 ![LLM](https://img.shields.io/badge/LLM-powered-ff69b4)
 [![Follow on Bluesky](https://img.shields.io/badge/Bluesky-Follow-0285FF?logo=bluesky&logoColor=white)](https://bsky.app/profile/rickardkarlsson.bsky.social)
 
-A tool for detecting statistical anomalies in randomized controlled trials (RCTs) from medical research papers using automated Table 1 extraction and statistical testing.
+A tool for detecting statistical anomalies in data from randomized controlled trials (RCTs) presented in medical research papers using automated data extraction and statistical testing.
 
 Medical research papers typically report baseline characteristics of each treatment group in Table 1. Under proper randomization, these summary statistics should follow predictable distributions. RCT Checker extracts Table 1 from PDFs using LLMs and tests whether the reported statistics deviate from what is expected under randomization. It is intended as a tool for metascience and sanity checking in medical research.
 

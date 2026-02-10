@@ -177,4 +177,4 @@ Contributions are welcome. Please run tests and linters before submitting a PR.
 
 If you use RCT Checker in academic work, please cite:
 
-> Rickard Karlsson. *RCT Checker: Automated Detection of Baseline Anomalies in RCTs*. GitHub, 2026.
+> Rickard Karlsson. *RCT Checker*. GitHub, 2026.

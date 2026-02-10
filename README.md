@@ -2,7 +2,7 @@
 
 ![Tests](https://img.shields.io/github/actions/workflow/status/RickardKarl/rct-checker/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![License](https://img.shields.io/github/license/RickardKarl/rct-checker)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![LLM](https://img.shields.io/badge/LLM-powered-ff69b4)
 [![Follow on Bluesky](https://img.shields.io/badge/Bluesky-Follow-0285FF?logo=bluesky&logoColor=white)](https://bsky.app/profile/rickardkarlsson.bsky.social)
 

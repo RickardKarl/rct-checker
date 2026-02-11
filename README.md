@@ -59,7 +59,7 @@ Note: the test assumes independence of the z-scores, which cannot be guaranteed 
 
 For each categorical variable with reported counts, a **Fisher's exact test** is run on the corresponding contingency table (counts vs. group membership). This tests whether the observed distribution of categories across groups is consistent with random allocation. For tables with more than two groups, a Monte Carlo approximation is used.
 
-### Combining evidence
+### Combining statistical tests
 
 All p-values (one from the chi-squared variance test plus one per categorical variable) are aggregated into a single combined p-value using **Fisher's method**. Under the null hypothesis of proper randomization, this combined p-value represents the probability of observing test results at least as extreme as those obtained.
 

@@ -37,7 +37,11 @@ See [report-example.pdf](report-example.pdf) for a sample report.
 
 ## Methodology
 
-The analysis exploits the fact that proper randomization produces predictable distributions of baseline summary statistics across treatment groups.
+The statistical analysis exploits the fact that proper randomization produces predictable distributions of baseline summary statistics across treatment groups. This approach is directly inspired by the methodology of Dr. John Carlisle in [this paper](https://pubmed.ncbi.nlm.nih.gov/22404311/).
+
+Consider the following example: in a randomized controlled trial where individuals are assigned to control or treatment by a coin flip, a categorical variable like sex should have roughly the same distribution in both groups. These kinds of summary counts (or, in the case of continuous variables such as age, means and standard deviations) are typically reported in Table 1 of medical papers. We can extract this information and test whether the observed distributions deviate from what is expected under proper randomization. Deviations that are too large suggest implausible imbalances; deviations that are too small suggest suspiciously perfect balance. Finally, we combine evidence across all variables into a single p-value using Fisher's method, representing the probability of observing results at least as extreme under the null hypothesis of proper randomization.
+
+Below, we describe the specific tests applied to continuous and categorical variables.
 
 ### Continuous variables
 
@@ -47,7 +51,9 @@ For each continuous variable reported with a mean and SD (or 95% CI, from which 
 z = (group_mean - population_mean) / SEM
 ```
 
-where `population_mean` is the weighted average across groups and `SEM = SD / sqrt(n)`. Under proper randomization, these z-scores should be approximately standard normal. A **chi-squared variance test** then checks whether the observed variance of all z-scores across all continuous variables deviates from 1. Variance that is too low suggests suspiciously well-balanced groups; variance that is too high suggests implausible imbalances.
+where `population_mean` is the weighted average across groups and `SEM = SD / sqrt(n)`. Under proper randomization, these z-scores should be approximately standard normal. A **chi-squared variance test** then checks whether the observed variance of all z-scores across all continuous variables deviates from 1. 
+
+Note: the test assumes independence of the z-scores, which cannot be guaranteed since baseline variables are often correlated. This could make the test less conservative (i.e. more false positives). The impact is likely minor when correlations are weak, but accounting for this will be addressed in future iterations. If needed, it is possible to skip this test using the --skip-cont flag when running the analysis.
 
 ### Categorical variables
 

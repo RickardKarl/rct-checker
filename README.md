@@ -53,7 +53,7 @@ z = (group_mean - population_mean) / SEM
 
 where `population_mean` is the weighted average across groups and `SEM = SD / sqrt(n)`. Under proper randomization, these z-scores should be approximately standard normal. A **chi-squared variance test** then checks whether the observed variance of all z-scores across all continuous variables deviates from 1. 
 
-Note: the test assumes independence of the z-scores, which cannot be guaranteed since baseline variables are often correlated. This could make the test less conservative (i.e. more false positives). The impact is likely minor when correlations are weak, but accounting for this will be addressed in future iterations. If needed, it is possible to skip this test using the --skip-cont flag when running the analysis.
+Note: the test assumes independence of the z-scores, which cannot be guaranteed since baseline variables are often correlated. This could make the test less conservative (i.e. more false positives). The impact is likely minor when correlations are weak, but accounting for this will be addressed in future iterations. If needed, it is possible to skip this test using the `--skip-cont flag` when running the analysis.
 
 ### Categorical variables
 

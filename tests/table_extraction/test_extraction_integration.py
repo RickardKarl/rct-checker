@@ -1,8 +1,8 @@
 """Integration tests for the extraction pipeline.
 
 These tests verify that the extraction pipeline produces expected JSON output
-for a set of test PDF files. The expected outputs are stored as golden files
-in data/extracted_table1/.
+for a set of test PDF files. The PDFs and expected JSON outputs should be stored as "ground truth" files
+in tests/test_files/. 
 
 Note: These tests call the actual OpenAI API, so they are:
 - Slow (several seconds per PDF)
@@ -19,7 +19,6 @@ Fuzzy matching (90% similarity) is used for:
 - level, variable
 
 Run with: pytest tests/table_extraction/test_extraction_integration.py -v
-Skip with: pytest -m "not integration"
 """
 
 import json

@@ -38,9 +38,10 @@ huggingface = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "-m 'not integration'"
+addopts = "-m 'not integration_extraction and not integration_statistical_analysis'"
 markers = [
-    "integration: marks tests as integration tests (may call external APIs, slow)",
+    "integration_extraction: integration tests for table extraction (uses LLM calls)",
+    "integration_statistical_analysis: integration tests for statistical analysis pipeline",
 ]
 filterwarnings = [
     "ignore::DeprecationWarning",

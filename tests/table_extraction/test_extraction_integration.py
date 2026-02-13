@@ -235,7 +235,7 @@ def get_test_cases():
     return test_cases
 
 
-@pytest.mark.integration
+@pytest.mark.integration_extraction
 @pytest.mark.parametrize("pdf_path,expected_json_path", get_test_cases())
 def test_extraction_matches_expected(pdf_path, expected_json_path):
     """Test that extraction output matches the expected golden file."""
